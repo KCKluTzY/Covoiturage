@@ -1,0 +1,159 @@
+/**body style**/
+
+body {
+   /* background: url(../img/covoiturage2.jpg);*/
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/**div container style**/
+
+.container {
+    margin-top: 10px;
+}
+
+
+.logo{
+    margin-top: -8%;
+    margin-left: -4%;
+    width: 100%;
+    border: 1px solid ;
+    border-color: #cccbcb;
+}
+/**form style**/
+
+form {
+    padding: 10px;
+    align-content: center;
+    margin-top: 30px;
+    margin-left: 15px;
+    color: #000000;
+}
+
+#searchForm {
+    color: #000000;
+    font-size: 15px;
+}
+
+
+/**div with map id style**/
+
+#map {
+    width: 100%;
+    height: 300px;
+    border: 5px solid #FFF;
+    border-radius: 2px;
+}
+
+
+/**div with result id style**/
+
+#result {
+    margin-top: 5px;
+}
+
+
+/**div with result class style**/
+
+.result {
+    background-color: #ffffff7e;
+    padding: 20px;
+}
+
+
+/**checkbox style**/
+
+checkbox {
+    color: #000;
+}
+
+
+/**h1 & p tag style**/
+
+.header h1,
+p {
+    color: #000000;
+}
+
+
+
+/**table style**/
+
+.preview {
+    margin-top: 30px;
+    background-color: #ffffff72;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+img#preview {
+    max-width: 100%;
+}
+
+
+/**loader style**/
+
+#loader {
+    display: none;
+}
+
+
+/**div body style**/
+
+.trip {
+    background-color: rgba(255, 255, 255, 0.671);
+    height: auto;
+    margin-top: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #000;
+}
+
+.trip p {
+    color: #000;
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+
+
+#profileImg {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.large-input::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.large-input:-moz-placeholder {
+    text-align: center;
+}
+
+.large-input::-moz-placeholder {
+    text-align: center;
+}
+
+.large-input:-ms-input-placeholder {
+    text-align: center;
+}
+
+.placeholder-centered::placeholder {
+    text-align: center;
+}
+
+
+
+
+.navbar-brand {
+    width: 230px; /* Ajustez la largeur selon vos besoins */
+    max-width: 230px;
+}
+
+.custom-form {
+    background-color: #e9f3f392; 
+}
+

@@ -1,0 +1,67 @@
+CREATE TABLE utilisateurs (
+    utilisateurs_id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(30) NOT NULL,
+    prenom VARCHAR(30) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    telephone VARCHAR(10),
+    mot_de_passe VARCHAR(255) NOT NULL
+    login VARCHAR(255) NOT NULL
+);
+ALTER TABLE utilisateurs ADD reset_token VARCHAR(255);
+
+CREATE TABLE remember_me (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    authentificator VARCHAR(255) NOT NULL,
+    f2authentificator2 VARCHAR(255) NOT NULL,
+    user_id INT NOT NULL,
+    expires DATETIME NOT NULL
+);
+
+
+
+CREATE TABLE LieuxAdresse (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    lieu VARCHAR(500) NOT NULL,
+    adresse VARCHAR(500) NOT NULL
+);
+
+INSERT INTO LieuxAdresse (lieu, adresse) VALUES
+('SIEGE SOCIAL DE L\'ASSOCIATION', '1 Rue Louis Petit 59220 DENAIN'),
+('INSTITUT MEDICO EDUCATIF (IME)', '431 Route D\'oisy 59220 DENAIN'),
+('SESSAD ( Service de soins et d\'Education Spécialisée A Domicile )', '260 Rue Arthur Brunet 59220 DENAIN'),
+('ESAT ATELIER DE L\'OSTREVENT', '523 Route d\'Oisy 59220 DENAIN'),
+('SISEP', '102 Av Jean Jaures 59220 DENAIN'),
+('CENTRE D\'HABITAT ET ANNEXES', '531 Route d\'Oisy 59220 DENAIN'),
+('RESTAURATION DU CENTRE D\'HABITAT', '531 Route d\'Oisy 59220 DENAIN'),
+('FOYER \'\'LES GRANDS CHAMPS HEBERGEMENT\'\'', '865 Route d\'Oisy 59220 DENAIN'),
+('FOYER \'\'LES GRANDS CHAMPS ACCUEIL DE JOUR\'\'', '865 Route d\'Oisy 59220 DENAIN'),
+('FOYER DE VIE \'\'PEPINIERES\'\' HEBERGEMENT', '771 Route d\'oisy 59220 DENAIN'),
+('FOYER DE VIE \'\'PEPINIERES\'\' ACCUEIL DE JOUR', '771 Route d\'oisy 59220 DENAIN'),
+('MAISON D\'ACCUEIL SPECIALISEE', '481 Rue Berthelot 59220 DENAIN'),
+('SERVICE AUXILIARE DE VIE (S,A,V)', '481 Rue Berthelot 59220 DENAIN'),
+('FOYER LOGEMENT', '88 Avenue J.Jaures 59220 DENAIN'),
+('SAVS', '88 Avenue J.Jaures 59220 DENAIN'),
+('SAJ (Service Accueil de Jour)', '7 bd Caraman 59220 DENAIN'),
+('SAT (Service Accueil Temporaire) de jour', '7 bd Caraman 59220 DENAIN'),
+('OES (Ostrevent Espace Service)', '523 Route d\'Oisy 59220 DENAIN'),
+('SAP (Service d\'Aide à la Parentalité)', '7 bd Caraman 59220 DENAIN'),
+('EAL', '7 bd Caraman 59220 DENAIN'),
+('SEVEL2', 'Impasse de la fosse aux loups
+ZONE INDUSTRIELLE 
+59111 Hordain - LIEU SAINT AMAND'),
+('UMV', 'ZI n°2 PSA
+RUE MARC LEFRANC
+59125 TRITH SAINT LEGER / PROUVY');
+
+CREATE TABLE trajets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    lieu_depart VARCHAR(255) NOT NULL,
+    villes_passage TEXT,
+    lieu_arrivee VARCHAR(500),
+    adresse_arrivee VARCHAR(500),
+    nombre_places INT NOT NULL,
+    heure_depart TIME NOT NULL,
+    telephone VARCHAR(20) NOT NULL,
+    heure_arrivee TIME NOT NULL,
+    email VARCHAR(50) NOT NULL
+);
